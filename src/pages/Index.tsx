@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import { Sparkles, Star, ArrowRight, Play, Shield, Award, Users } from 'lucide-react';
@@ -30,14 +29,14 @@ const Index = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto slide-in-up">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 mb-8 hover:bg-white/30 hover:scale-110 hover:rotate-1 transition-all duration-500 cursor-pointer group">
-              <Sparkles className="w-5 h-5 text-warm-gold animate-sparkle group-hover:animate-spin" />
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 mb-8 hover:bg-white/30 hover:scale-110 transition-all duration-500 cursor-pointer group">
+              <Sparkles className="w-5 h-5 text-warm-gold group-hover:animate-spin" />
               <span className="text-sm font-medium text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Premium Cosmetics Manufacturing</span>
             </div>
             
             <h1 className="font-cormorant text-5xl md:text-7xl lg:text-8xl font-bold text-deep-brown mb-6 leading-tight animate-bounce-in">
               Beauty that
-              <span className="block bg-gradient-to-r from-warm-gold to-soft-pink bg-clip-text text-transparent text-gradient animate-pulse">
+              <span className="block text-deep-brown">
                 Transforms
               </span>
             </h1>
@@ -50,18 +49,11 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <Link 
                 to="/products"
-                className="group bg-gradient-to-r from-warm-gold to-soft-pink text-white font-semibold px-8 py-4 rounded-full transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:from-warm-gold/90 hover:to-soft-pink/90 hover:rotate-2 flex items-center gap-2 btn-magnetic"
+                className="group bg-gradient-to-r from-warm-gold to-soft-pink text-white font-semibold px-8 py-4 rounded-full transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:from-warm-gold/90 hover:to-soft-pink/90 flex items-center gap-2 btn-magnetic"
               >
                 Explore Products
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-3 group-hover:scale-125 transition-all duration-500" />
               </Link>
-              
-              <button className="group flex items-center gap-3 text-deep-brown hover:text-warm-gold transition-all duration-500 hover:scale-110">
-                <div className="w-12 h-12 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-warm-gold group-hover:text-white group-hover:scale-125 group-hover:rotate-180 transition-all duration-500 group-hover:shadow-xl">
-                  <Play className="w-5 h-5 ml-1 group-hover:animate-pulse" />
-                </div>
-                <span className="font-medium group-hover:font-bold transition-all duration-300">Watch Our Story</span>
-              </button>
             </div>
           </div>
         </div>

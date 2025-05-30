@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import { Download, Sparkles, Shield, Leaf, Mail, Phone, MessageCircle } from 'lucide-react';
@@ -46,28 +45,25 @@ const Products = () => {
       image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       features: ['Acetone-free formula', 'Vitamin E enriched', 'Biodegradable wipes', 'Travel-friendly'],
       description: 'Our bestselling nail polish remover wipes offer gentle yet effective removal with nourishing ingredients.',
-      badges: ['Best Seller', 'Eco-Friendly'],
-      minimumOrder: '500 units'
+      badges: ['Best Seller', 'Eco-Friendly']
     },
     {
       id: 2,
-      name: 'Coming Soon - Hydrating Face Serum',
+      name: 'Skincare Coming Soon',
       category: 'skincare',
       image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      features: ['Hyaluronic acid', 'Anti-aging formula', 'All skin types', 'Dermatologist tested'],
-      description: 'Revolutionary anti-aging serum with advanced hydration technology (Coming Soon).',
-      badges: ['Coming Soon'],
-      minimumOrder: 'TBA'
+      features: ['Premium formulations', 'Natural ingredients', 'Dermatologist tested', 'All skin types'],
+      description: 'Revolutionary skincare products coming soon to transform your daily routine.',
+      badges: ['Coming Soon']
     },
     {
       id: 3,
-      name: 'Coming Soon - Long-lasting Lipstick',
+      name: 'Makeup Coming Soon',
       category: 'makeup',
       image: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      features: ['16-hour wear', 'Matte finish', 'Cruelty-free', 'Rich pigmentation'],
-      description: 'Professional-grade lipstick with superior staying power and comfort (Coming Soon).',
-      badges: ['Coming Soon'],
-      minimumOrder: 'TBA'
+      features: ['Long-lasting formula', 'Rich pigmentation', 'Cruelty-free', 'Professional grade'],
+      description: 'Professional-grade makeup products coming soon with superior quality and performance.',
+      badges: ['Coming Soon']
     }
   ];
 
@@ -111,9 +107,9 @@ const Products = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-500 hover:scale-110 hover:shadow-xl hover:rotate-1 ${
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-500 hover:scale-110 hover:shadow-xl ${
                   selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-warm-gold to-soft-pink text-white shadow-lg transform scale-105 animate-pulse'
+                    ? 'bg-gradient-to-r from-warm-gold to-soft-pink text-white shadow-lg transform scale-105'
                     : 'bg-white text-deep-brown hover:bg-soft-peach/50 border border-gray-200 hover:border-warm-gold hover:shadow-lg'
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -132,22 +128,22 @@ const Products = () => {
             {filteredProducts.map((product, index) => (
               <div 
                 key={product.id} 
-                className="bg-white rounded-3xl overflow-hidden shadow-lg hover-lift scale-in group cursor-pointer hover:shadow-2xl hover:rotate-1 transition-all duration-700"
+                className="bg-white rounded-3xl overflow-hidden shadow-lg hover-lift scale-in group cursor-pointer hover:shadow-2xl transition-all duration-700"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="relative overflow-hidden">
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="w-full h-64 object-cover group-hover:scale-125 group-hover:rotate-3 transition-all duration-700"
+                    className="w-full h-64 object-cover group-hover:scale-125 transition-all duration-700"
                   />
                   <div className="absolute top-4 left-4 flex flex-wrap gap-2">
                     {product.badges.map((badge, badgeIndex) => (
                       <span 
                         key={badgeIndex}
-                        className={`px-3 py-1 text-xs font-semibold rounded-full hover:scale-110 transition-all duration-300 hover:rotate-12 ${
+                        className={`px-3 py-1 text-xs font-semibold rounded-full hover:scale-110 transition-all duration-300 ${
                           badge === 'Best Seller' 
-                            ? 'bg-warm-gold text-white animate-pulse hover:animate-bounce' 
+                            ? 'bg-warm-gold text-white hover:bg-warm-gold/90' 
                             : badge === 'Eco-Friendly'
                             ? 'bg-green-500 text-white hover:bg-green-600'
                             : 'bg-gray-500 text-white hover:bg-gray-600'
@@ -171,37 +167,29 @@ const Products = () => {
                   <div className="space-y-2 mb-6">
                     {product.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center gap-2 group/feature hover:translate-x-2 transition-transform duration-300">
-                        <div className="w-1.5 h-1.5 bg-warm-gold rounded-full group-hover/feature:scale-200 group-hover/feature:animate-spin transition-all duration-300" />
+                        <div className="w-1.5 h-1.5 bg-warm-gold rounded-full group-hover/feature:scale-200 transition-all duration-300" />
                         <span className="text-sm text-deep-brown/80 group-hover/feature:text-warm-gold transition-colors duration-300">{feature}</span>
                       </div>
                     ))}
                   </div>
 
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-sm text-deep-brown/60 hover:text-warm-gold transition-colors duration-300 cursor-pointer">
-                      Min. Order: {product.minimumOrder}
-                    </span>
-                    {product.id === 1 && (
-                      <div className="flex items-center gap-1 text-green-600 hover:scale-110 hover:rotate-12 transition-all duration-300 cursor-pointer">
-                        <Leaf className="w-4 h-4 animate-pulse hover:animate-spin" />
+                  {product.id === 1 && (
+                    <div className="flex items-center justify-end mb-6">
+                      <div className="flex items-center gap-1 text-green-600 hover:scale-110 transition-all duration-300 cursor-pointer">
+                        <Leaf className="w-4 h-4" />
                         <span className="text-xs font-medium">Eco-Friendly</span>
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
 
                   <div className="flex gap-3">
                     {product.id === 1 ? (
-                      <>
-                        <Link 
-                          to="/contact"
-                          className="flex-1 bg-gradient-to-r from-warm-gold to-soft-pink text-white font-semibold py-3 rounded-full text-center hover:shadow-2xl hover:scale-110 hover:from-warm-gold/90 hover:to-soft-pink/90 hover:rotate-1 transition-all duration-500 transform"
-                        >
-                          Request Quote
-                        </Link>
-                        <button className="px-4 py-3 border-2 border-warm-gold text-warm-gold rounded-full hover:bg-warm-gold hover:text-white hover:scale-110 hover:shadow-xl hover:rotate-12 transition-all duration-500">
-                          <Download className="w-5 h-5 hover:animate-bounce" />
-                        </button>
-                      </>
+                      <Link 
+                        to="/contact"
+                        className="flex-1 bg-gradient-to-r from-warm-gold to-soft-pink text-white font-semibold py-3 rounded-full text-center hover:shadow-2xl hover:scale-110 hover:from-warm-gold/90 hover:to-soft-pink/90 transition-all duration-500 transform"
+                      >
+                        Request Quote
+                      </Link>
                     ) : (
                       <button 
                         disabled
@@ -239,8 +227,8 @@ const Products = () => {
               { icon: Sparkles, title: 'ISO Certified', desc: 'International quality management standards' },
               { icon: Leaf, title: 'Halal Certified', desc: 'Ethical and halal manufacturing processes' }
             ].map((item, index) => (
-              <div key={index} className="text-center p-8 bg-white/60 backdrop-blur-sm rounded-2xl hover-lift group cursor-pointer hover:bg-white/80 transition-all duration-700 hover:rotate-2 hover:shadow-2xl" style={{ animationDelay: `${index * 0.2}s` }}>
-                <item.icon className="w-12 h-12 text-warm-gold mx-auto mb-4 group-hover:scale-150 group-hover:rotate-180 group-hover:text-soft-pink transition-all duration-700 animate-pulse group-hover:animate-spin" />
+              <div key={index} className="text-center p-8 bg-white/60 backdrop-blur-sm rounded-2xl hover-lift group cursor-pointer hover:bg-white/80 transition-all duration-700 hover:shadow-2xl" style={{ animationDelay: `${index * 0.2}s` }}>
+                <item.icon className="w-12 h-12 text-warm-gold mx-auto mb-4 group-hover:scale-150 group-hover:text-soft-pink transition-all duration-700" />
                 <h3 className="font-cormorant text-xl font-bold text-deep-brown mb-2 group-hover:text-warm-gold group-hover:scale-110 transition-all duration-500">{item.title}</h3>
                 <p className="text-deep-brown/70 text-sm group-hover:text-deep-brown transition-colors duration-300">{item.desc}</p>
               </div>

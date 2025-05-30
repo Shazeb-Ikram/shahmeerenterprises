@@ -40,16 +40,16 @@ const Contact = () => {
       <section className="relative pt-20 pb-16 overflow-hidden">
         <div className="absolute inset-0 hero-gradient" />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto slide-in-up">
+          <div className="text-center max-w-4xl mx-auto professional-transition">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 mb-8 hover:bg-white/30 transition-all duration-300 cursor-pointer">
-              <Sparkles className="w-5 h-5 text-warm-gold animate-pulse" />
+              <Sparkles className="w-5 h-5 text-warm-gold" />
               <span className="text-sm font-medium text-deep-brown">Get In Touch</span>
             </div>
             
-            <h1 className="font-cormorant text-4xl md:text-6xl font-bold text-deep-brown mb-6">
+            <h1 className="font-cormorant text-4xl md:text-6xl font-bold text-deep-brown mb-6 professional-transition">
               Contact Us
             </h1>
-            <p className="text-xl text-deep-brown/80 max-w-2xl mx-auto">
+            <p className="text-xl text-deep-brown/80 max-w-2xl mx-auto professional-transition">
               Ready to bring your cosmetics vision to life? Let's discuss your manufacturing needs and create something beautiful together.
             </p>
           </div>
@@ -61,12 +61,12 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
             {/* Contact Form */}
-            <div className="slide-in-left">
+            <div className="professional-transition">
               <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <h2 className="font-cormorant text-3xl font-bold text-deep-brown mb-2">
+                <h2 className="font-cormorant text-3xl font-bold text-deep-brown mb-2 professional-transition">
                   Send Us a Message
                 </h2>
-                <p className="text-deep-brown/70 mb-8">
+                <p className="text-deep-brown/70 mb-8 professional-transition">
                   Fill out the form below and we'll get back to you within 24 hours.
                 </p>
 
@@ -158,11 +158,11 @@ const Contact = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="slide-in-right">
+            <div className="professional-transition">
               <div className="space-y-8">
                 {/* Quick Contact */}
                 <div className="bg-gradient-to-br from-soft-peach/30 to-soft-pink/20 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
-                  <h3 className="font-cormorant text-2xl font-bold text-deep-brown mb-6">
+                  <h3 className="font-cormorant text-2xl font-bold text-deep-brown mb-6 professional-transition">
                     Quick Contact
                   </h3>
                   
@@ -171,7 +171,7 @@ const Contact = () => {
                       onClick={handleWhatsAppClick}
                       className="w-full flex items-center gap-4 p-4 bg-green-500 hover:bg-green-600 text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                     >
-                      <MessageCircle className="w-6 h-6 animate-pulse group-hover:scale-110 transition-transform duration-300" />
+                      <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                       <div className="text-left">
                         <div className="font-semibold">WhatsApp Business</div>
                         <div className="text-sm opacity-90">+92 300 1234567</div>
@@ -182,7 +182,7 @@ const Contact = () => {
                       onClick={handleEmailClick}
                       className="w-full flex items-center gap-4 p-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                     >
-                      <Mail className="w-6 h-6 animate-pulse group-hover:scale-110 transition-transform duration-300" />
+                      <Mail className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                       <div className="text-left">
                         <div className="font-semibold">Email Us</div>
                         <div className="text-sm opacity-90">info@shahmeer.com</div>
@@ -190,7 +190,7 @@ const Contact = () => {
                     </button>
 
                     <div className="flex items-center gap-4 p-4 bg-warm-gold/20 rounded-xl hover:bg-warm-gold/30 transition-all duration-300 cursor-pointer hover:scale-105 group">
-                      <Phone className="w-6 h-6 text-warm-gold animate-pulse group-hover:scale-110 transition-transform duration-300" />
+                      <Phone className="w-6 h-6 text-warm-gold group-hover:scale-110 transition-transform duration-300" />
                       <div>
                         <div className="font-semibold text-deep-brown">Phone</div>
                         <div className="text-sm text-deep-brown/70">+92 300 1234567</div>
@@ -201,13 +201,13 @@ const Contact = () => {
 
                 {/* Office Info */}
                 <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <h3 className="font-cormorant text-2xl font-bold text-deep-brown mb-6">
+                  <h3 className="font-cormorant text-2xl font-bold text-deep-brown mb-6 professional-transition">
                     Office Information
                   </h3>
                   
                   <div className="space-y-6">
                     <div className="flex items-start gap-4 group cursor-pointer hover:bg-soft-peach/20 p-3 rounded-lg transition-all duration-300">
-                      <MapPin className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300 animate-pulse" />
+                      <MapPin className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300" />
                       <div>
                         <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Manufacturing Facility</div>
                         <div className="text-deep-brown/70">
@@ -218,7 +218,7 @@ const Contact = () => {
                     </div>
 
                     <div className="flex items-start gap-4 group cursor-pointer hover:bg-soft-peach/20 p-3 rounded-lg transition-all duration-300">
-                      <Clock className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300 animate-pulse" />
+                      <Clock className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300" />
                       <div>
                         <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Business Hours</div>
                         <div className="text-deep-brown/70">
@@ -230,7 +230,7 @@ const Contact = () => {
                     </div>
 
                     <div className="flex items-start gap-4 group cursor-pointer hover:bg-soft-peach/20 p-3 rounded-lg transition-all duration-300">
-                      <Globe className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300 animate-pulse" />
+                      <Globe className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300" />
                       <div>
                         <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Website</div>
                         <div className="text-deep-brown/70">shahmeerenterprises.com</div>
