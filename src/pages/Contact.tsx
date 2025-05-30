@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import { Mail, Phone, MapPin, Send, Sparkles, MessageCircle, Clock, Globe } from 'lucide-react';
@@ -9,19 +8,15 @@ const Contact = () => {
     contactName: '',
     email: '',
     phone: '',
-    orderVolume: '',
-    productInterest: '',
     message: ''
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
-    // You can add form submission logic here
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -46,8 +41,8 @@ const Contact = () => {
         <div className="absolute inset-0 hero-gradient" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto slide-in-up">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 mb-8">
-              <Sparkles className="w-5 h-5 text-warm-gold" />
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 mb-8 hover:bg-white/30 transition-all duration-300 cursor-pointer">
+              <Sparkles className="w-5 h-5 text-warm-gold animate-pulse" />
               <span className="text-sm font-medium text-deep-brown">Get In Touch</span>
             </div>
             
@@ -67,7 +62,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
             {/* Contact Form */}
             <div className="slide-in-left">
-              <div className="bg-white rounded-3xl p-8 shadow-lg">
+              <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <h2 className="font-cormorant text-3xl font-bold text-deep-brown mb-2">
                   Send Us a Message
                 </h2>
@@ -87,7 +82,7 @@ const Contact = () => {
                         value={formData.companyName}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md"
                         placeholder="Your Company"
                       />
                     </div>
@@ -101,7 +96,7 @@ const Contact = () => {
                         value={formData.contactName}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md"
                         placeholder="Your Name"
                       />
                     </div>
@@ -118,7 +113,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -131,47 +126,9 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md"
                         placeholder="+1 (555) 123-4567"
                       />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-deep-brown mb-2">
-                        Order Volume *
-                      </label>
-                      <select
-                        name="orderVolume"
-                        value={formData.orderVolume}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300"
-                      >
-                        <option value="">Select Volume</option>
-                        <option value="500-1000">500 - 1,000 units</option>
-                        <option value="1000-5000">1,000 - 5,000 units</option>
-                        <option value="5000-10000">5,000 - 10,000 units</option>
-                        <option value="10000+">10,000+ units</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-deep-brown mb-2">
-                        Product Interest
-                      </label>
-                      <select
-                        name="productInterest"
-                        value={formData.productInterest}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300"
-                      >
-                        <option value="">Select Product</option>
-                        <option value="nail-polish-remover">Nail Polish Remover Wipes</option>
-                        <option value="custom-formulation">Custom Formulation</option>
-                        <option value="private-labeling">Private Labeling</option>
-                        <option value="other">Other</option>
-                      </select>
                     </div>
                   </div>
 
@@ -184,17 +141,17 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={5}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 resize-none"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 resize-none hover:border-warm-gold hover:shadow-md"
                       placeholder="Tell us about your project requirements..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-warm-gold to-soft-pink text-white font-semibold py-4 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+                    className="w-full bg-gradient-to-r from-warm-gold to-soft-pink text-white font-semibold py-4 rounded-xl hover:shadow-xl hover:scale-105 hover:from-warm-gold/90 hover:to-soft-pink/90 transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     Send Message
-                    <Send className="w-5 h-5" />
+                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
                 </form>
               </div>
@@ -204,7 +161,7 @@ const Contact = () => {
             <div className="slide-in-right">
               <div className="space-y-8">
                 {/* Quick Contact */}
-                <div className="bg-gradient-to-br from-soft-peach/30 to-soft-pink/20 rounded-3xl p-8">
+                <div className="bg-gradient-to-br from-soft-peach/30 to-soft-pink/20 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
                   <h3 className="font-cormorant text-2xl font-bold text-deep-brown mb-6">
                     Quick Contact
                   </h3>
@@ -212,9 +169,9 @@ const Contact = () => {
                   <div className="space-y-4">
                     <button 
                       onClick={handleWhatsAppClick}
-                      className="w-full flex items-center gap-4 p-4 bg-green-500 hover:bg-green-600 text-white rounded-xl transition-all duration-300 hover:scale-105"
+                      className="w-full flex items-center gap-4 p-4 bg-green-500 hover:bg-green-600 text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                     >
-                      <MessageCircle className="w-6 h-6" />
+                      <MessageCircle className="w-6 h-6 animate-pulse group-hover:scale-110 transition-transform duration-300" />
                       <div className="text-left">
                         <div className="font-semibold">WhatsApp Business</div>
                         <div className="text-sm opacity-90">+92 300 1234567</div>
@@ -223,17 +180,17 @@ const Contact = () => {
 
                     <button 
                       onClick={handleEmailClick}
-                      className="w-full flex items-center gap-4 p-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl transition-all duration-300 hover:scale-105"
+                      className="w-full flex items-center gap-4 p-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                     >
-                      <Mail className="w-6 h-6" />
+                      <Mail className="w-6 h-6 animate-pulse group-hover:scale-110 transition-transform duration-300" />
                       <div className="text-left">
                         <div className="font-semibold">Email Us</div>
                         <div className="text-sm opacity-90">info@shahmeer.com</div>
                       </div>
                     </button>
 
-                    <div className="flex items-center gap-4 p-4 bg-warm-gold/20 rounded-xl">
-                      <Phone className="w-6 h-6 text-warm-gold" />
+                    <div className="flex items-center gap-4 p-4 bg-warm-gold/20 rounded-xl hover:bg-warm-gold/30 transition-all duration-300 cursor-pointer hover:scale-105 group">
+                      <Phone className="w-6 h-6 text-warm-gold animate-pulse group-hover:scale-110 transition-transform duration-300" />
                       <div>
                         <div className="font-semibold text-deep-brown">Phone</div>
                         <div className="text-sm text-deep-brown/70">+92 300 1234567</div>
@@ -243,16 +200,16 @@ const Contact = () => {
                 </div>
 
                 {/* Office Info */}
-                <div className="bg-white rounded-3xl p-8 shadow-lg">
+                <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <h3 className="font-cormorant text-2xl font-bold text-deep-brown mb-6">
                     Office Information
                   </h3>
                   
                   <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <MapPin className="w-6 h-6 text-warm-gold mt-1" />
+                    <div className="flex items-start gap-4 group cursor-pointer hover:bg-soft-peach/20 p-3 rounded-lg transition-all duration-300">
+                      <MapPin className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300 animate-pulse" />
                       <div>
-                        <div className="font-semibold text-deep-brown">Manufacturing Facility</div>
+                        <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Manufacturing Facility</div>
                         <div className="text-deep-brown/70">
                           Premium Industrial Zone<br />
                           Karachi, Pakistan
@@ -260,10 +217,10 @@ const Contact = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4">
-                      <Clock className="w-6 h-6 text-warm-gold mt-1" />
+                    <div className="flex items-start gap-4 group cursor-pointer hover:bg-soft-peach/20 p-3 rounded-lg transition-all duration-300">
+                      <Clock className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300 animate-pulse" />
                       <div>
-                        <div className="font-semibold text-deep-brown">Business Hours</div>
+                        <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Business Hours</div>
                         <div className="text-deep-brown/70">
                           Monday - Friday: 9:00 AM - 6:00 PM<br />
                           Saturday: 9:00 AM - 2:00 PM<br />
@@ -272,10 +229,10 @@ const Contact = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4">
-                      <Globe className="w-6 h-6 text-warm-gold mt-1" />
+                    <div className="flex items-start gap-4 group cursor-pointer hover:bg-soft-peach/20 p-3 rounded-lg transition-all duration-300">
+                      <Globe className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300 animate-pulse" />
                       <div>
-                        <div className="font-semibold text-deep-brown">Website</div>
+                        <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Website</div>
                         <div className="text-deep-brown/70">shahmeerenterprises.com</div>
                       </div>
                     </div>
@@ -283,7 +240,7 @@ const Contact = () => {
                 </div>
 
                 {/* Response Time */}
-                <div className="bg-gradient-to-r from-warm-gold to-soft-pink rounded-3xl p-8 text-white">
+                <div className="bg-gradient-to-r from-warm-gold to-soft-pink rounded-3xl p-8 text-white hover:shadow-xl transition-shadow duration-300">
                   <h3 className="font-cormorant text-2xl font-bold mb-4">
                     We're Here to Help
                   </h3>
@@ -291,7 +248,7 @@ const Contact = () => {
                     Our team of experts is ready to assist you with your cosmetics manufacturing needs.
                   </p>
                   <div className="flex items-center gap-2">
-                    <Clock className="w-5 h-5" />
+                    <Clock className="w-5 h-5 animate-pulse" />
                     <span className="text-sm">Average response time: 2-4 hours</span>
                   </div>
                 </div>
