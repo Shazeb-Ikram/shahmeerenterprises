@@ -5,35 +5,35 @@
 
 @layer base {
   :root {
-    --background: 247 244 237; /* cream */
-    --foreground: 51 51 51; /* dark charcoal */
+    --background: 251 248 245; /* warm white */
+    --foreground: 30 27 24; /* deep brown */
 
-    --card: 247 244 237;
-    --card-foreground: 51 51 51;
+    --card: 251 248 245;
+    --card-foreground: 30 27 24;
 
-    --popover: 247 244 237;
-    --popover-foreground: 51 51 51;
+    --popover: 251 248 245;
+    --popover-foreground: 30 27 24;
 
-    --primary: 224 191 160; /* rose gold */
-    --primary-foreground: 51 51 51;
+    --primary: 220 162 114; /* warm gold */
+    --primary-foreground: 251 248 245;
 
-    --secondary: 248 224 224; /* soft blush */
-    --secondary-foreground: 51 51 51;
+    --secondary: 255 228 225; /* soft peach */
+    --secondary-foreground: 30 27 24;
 
-    --muted: 248 224 224;
-    --muted-foreground: 115 115 115;
+    --muted: 245 235 230;
+    --muted-foreground: 120 113 108;
 
-    --accent: 224 191 160;
-    --accent-foreground: 51 51 51;
+    --accent: 255 192 203; /* soft pink */
+    --accent-foreground: 30 27 24;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 224 191 160;
-    --input: 224 191 160;
-    --ring: 224 191 160;
+    --border: 230 215 205;
+    --input: 230 215 205;
+    --ring: 220 162 114;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
 }
 
@@ -43,21 +43,34 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply bg-background text-foreground font-poppins overflow-x-hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
+    @apply font-cormorant;
   }
 }
 
-/* Custom gradient backgrounds */
-.marble-gradient {
-  background: linear-gradient(135deg, #f7f4ed 0%, #e0bfa0 50%, #f8e0e0 100%);
+/* Beautiful gradient backgrounds */
+.hero-gradient {
+  background: linear-gradient(135deg, 
+    rgba(255, 228, 225, 0.8) 0%, 
+    rgba(255, 192, 203, 0.6) 25%, 
+    rgba(220, 162, 114, 0.4) 50%,
+    rgba(251, 248, 245, 0.9) 100%);
 }
 
-.gold-accent {
-  background: linear-gradient(45deg, #e0bfa0, #d4af37);
+.luxury-gradient {
+  background: linear-gradient(45deg, 
+    #dca272 0%, 
+    #f4d4c7 50%, 
+    #ffc0cb 100%);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Smooth scrolling */
@@ -68,9 +81,121 @@ html {
 /* Custom animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(220, 162, 114, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(220, 162, 114, 0.6);
+  }
 }
 
 .float-animation {
-  animation: float 3s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.slide-in-up {
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #dca272, #ffc0cb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #c69963, #ff91a4);
 }

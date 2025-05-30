@@ -53,25 +53,16 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				},
-				// Custom Shahmeer brand colors
-				'rose-gold': '#e0bfa0',
-				'cream': '#f7f4ed',
-				'soft-blush': '#f8e0e0',
-				'dark-charcoal': '#333333',
+				// Custom brand colors
+				'warm-gold': '#dca272',
+				'soft-peach': '#ffe4e1',
+				'soft-pink': '#ffc0cb',
+				'warm-white': '#fbf8f5',
+				'deep-brown': '#1e1b18',
 			},
 			fontFamily: {
-				'playfair': ['Playfair Display', 'serif'],
-				'inter': ['Inter', 'sans-serif'],
+				'poppins': ['Poppins', 'sans-serif'],
+				'cormorant': ['Cormorant Garamond', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
