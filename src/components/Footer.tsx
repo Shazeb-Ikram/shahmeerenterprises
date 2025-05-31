@@ -20,7 +20,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/7957e9b5-3dc9-4a0d-8385-e415791d2d6c.png" 
               alt="Shahmeer Enterprises" 
-              className="h-16 w-auto mb-4 filter brightness-0 invert"
+              className="h-20 w-auto mb-4 filter brightness-0 invert"
             />
             <p className="text-gray-300 mb-6 leading-relaxed">
               Your trusted partner in premium cosmetics manufacturing. We specialize in creating 
@@ -169,7 +169,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-gray-400">
-              © {currentYear} Shahmeer Enterprises. All rights reserved. | GMP & ISO Certified Manufacturing
+              © 2012 Shahmeer Enterprises. All rights reserved. | GMP & ISO Certified Manufacturing
             </div>
             <div className="flex gap-6 text-sm text-gray-400">
               <a href="#" className="hover:text-rose-gold transition-colors duration-300">

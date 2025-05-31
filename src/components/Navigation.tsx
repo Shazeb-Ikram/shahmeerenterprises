@@ -33,7 +33,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/7957e9b5-3dc9-4a0d-8385-e415791d2d6c.png" 
               alt="Shahmeer Enterprises" 
-              className="h-12 w-auto md:h-14 group-hover:scale-110 transition-all duration-300"
+              className="h-16 w-auto md:h-20 group-hover:scale-110 transition-all duration-300"
             />
           </Link>
 
