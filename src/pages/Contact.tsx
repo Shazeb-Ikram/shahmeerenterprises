@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
-import { Mail, Phone, MapPin, Send, Sparkles, MessageCircle, Clock, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Sparkles, MessageCircle, Clock, Globe, Facebook, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,11 +26,21 @@ const Contact = () => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I'm interested in discussing a bulk order for cosmetics manufacturing.");
-    window.open(`https://wa.me/+923001234567?text=${message}`, '_blank');
+    window.open(`https://wa.me/+9232163385642?text=${message}`, '_blank');
   };
 
   const handleEmailClick = () => {
-    window.open('mailto:info@shahmeer.com?subject=Manufacturing Inquiry', '_blank');
+    window.open('mailto:info@shahmeerenterprises.com?subject=Manufacturing Inquiry', '_blank');
+  };
+
+  const handleFacebookClick = () => {
+    // Placeholder for Facebook link - will be updated when user provides the link
+    window.open('https://facebook.com/shahmeerenterprises', '_blank');
+  };
+
+  const handleInstagramClick = () => {
+    // Placeholder for Instagram link - will be updated when user provides the link
+    window.open('https://instagram.com/shahmeerenterprises', '_blank');
   };
 
   return (
@@ -174,7 +185,7 @@ const Contact = () => {
                       <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                       <div className="text-left">
                         <div className="font-semibold">WhatsApp Business</div>
-                        <div className="text-sm opacity-90">+92 300 1234567</div>
+                        <div className="text-sm opacity-90">Chat with us instantly</div>
                       </div>
                     </button>
 
@@ -185,7 +196,7 @@ const Contact = () => {
                       <Mail className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                       <div className="text-left">
                         <div className="font-semibold">Email Us</div>
-                        <div className="text-sm opacity-90">info@shahmeer.com</div>
+                        <div className="text-sm opacity-90">info@shahmeerenterprises.com</div>
                       </div>
                     </button>
 
@@ -193,7 +204,7 @@ const Contact = () => {
                       <Phone className="w-6 h-6 text-warm-gold group-hover:scale-110 transition-transform duration-300" />
                       <div>
                         <div className="font-semibold text-deep-brown">Phone</div>
-                        <div className="text-sm text-deep-brown/70">+92 300 1234567</div>
+                        <div className="text-sm text-deep-brown/70">+92 321 6338 5642</div>
                       </div>
                     </div>
                   </div>
@@ -211,29 +222,35 @@ const Contact = () => {
                       <div>
                         <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Manufacturing Facility</div>
                         <div className="text-deep-brown/70">
-                          Premium Industrial Zone<br />
+                          A-183, Block 8, KEACHS<br />
                           Karachi, Pakistan
                         </div>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-4 group cursor-pointer hover:bg-soft-peach/20 p-3 rounded-lg transition-all duration-300">
-                      <Clock className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300" />
+                      <Facebook className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300" />
                       <div>
-                        <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Business Hours</div>
-                        <div className="text-deep-brown/70">
-                          Monday - Friday: 9:00 AM - 6:00 PM<br />
-                          Saturday: 9:00 AM - 2:00 PM<br />
-                          Sunday: Closed
-                        </div>
+                        <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Facebook</div>
+                        <button 
+                          onClick={handleFacebookClick}
+                          className="text-deep-brown/70 hover:text-warm-gold transition-colors duration-300"
+                        >
+                          Follow us on Facebook
+                        </button>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-4 group cursor-pointer hover:bg-soft-peach/20 p-3 rounded-lg transition-all duration-300">
-                      <Globe className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300" />
+                      <Instagram className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300" />
                       <div>
-                        <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Website</div>
-                        <div className="text-deep-brown/70">shahmeerenterprises.com</div>
+                        <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Instagram</div>
+                        <button 
+                          onClick={handleInstagramClick}
+                          className="text-deep-brown/70 hover:text-warm-gold transition-colors duration-300"
+                        >
+                          Follow us on Instagram
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -273,13 +290,14 @@ const Contact = () => {
                 Your trusted partner for premium cosmetics manufacturing. 
                 Creating beautiful products with ethical practices and exceptional quality.
               </p>
-              <p className="text-white/60 text-sm">shahmeerenterprises.com</p>
+              <p className="text-white/60 text-sm">info@shahmeerenterprises.com</p>
             </div>
 
             <div>
               <h4 className="font-cormorant font-bold text-lg mb-4">Quick Links</h4>
               <div className="space-y-2">
                 <a href="/" className="block text-white/70 hover:text-white transition-colors duration-300">Home</a>
+                <a href="/about" className="block text-white/70 hover:text-white transition-colors duration-300">About Us</a>
                 <a href="/products" className="block text-white/70 hover:text-white transition-colors duration-300">Our Products</a>
                 <a href="/contact" className="block text-white/70 hover:text-white transition-colors duration-300">Contact Us</a>
               </div>
@@ -288,15 +306,15 @@ const Contact = () => {
             <div>
               <h4 className="font-cormorant font-bold text-lg mb-4">Contact Info</h4>
               <div className="space-y-2 text-white/70">
-                <p>info@shahmeer.com</p>
-                <p>+92 300 1234567</p>
-                <p>Manufacturing Excellence</p>
+                <p>info@shahmeerenterprises.com</p>
+                <p>A-183, Block 8, KEACHS</p>
+                <p>Karachi, Pakistan</p>
               </div>
             </div>
           </div>
 
           <div className="border-t border-white/20 mt-12 pt-8 text-center text-white/60">
-            <p>&copy; 2024 Shahmeer Enterprises. All rights reserved.</p>
+            <p>&copy; 2012 Shahmeer Enterprises. All rights reserved.</p>
           </div>
         </div>
       </footer>

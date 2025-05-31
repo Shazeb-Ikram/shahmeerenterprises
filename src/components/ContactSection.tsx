@@ -32,7 +32,7 @@ Company: ${formData.companyName}
 Contact: ${formData.contactName}
 Expected Volume: ${formData.orderVolume}
 Product Interest: ${formData.productType}`);
-    window.open(`https://wa.me/+923001234567?text=${message}`, '_blank');
+    window.open(`https://wa.me/+9232163385642?text=${message}`, '_blank');
   };
 
   return (
@@ -208,8 +208,8 @@ Product Interest: ${formData.productType}`);
                   <div>
                     <h4 className="font-semibold text-white mb-1">Manufacturing Facility</h4>
                     <p className="text-gray-300">
-                      Industrial Estate, Sector 15<br />
-                      Karachi, Pakistan 75500
+                      A-183, Block 8, KEACHS<br />
+                      Karachi, Pakistan
                     </p>
                   </div>
                 </div>
@@ -220,7 +220,7 @@ Product Interest: ${formData.productType}`);
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">Business Line</h4>
-                    <p className="text-gray-300">+92 300 123 4567</p>
+                    <p className="text-gray-300">+92 321 6338 5642</p>
                     <p className="text-sm text-gray-400">Available 9 AM - 6 PM (PKT)</p>
                   </div>
                 </div>
@@ -231,7 +231,7 @@ Product Interest: ${formData.productType}`);
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">Email Contact</h4>
-                    <p className="text-gray-300">info@shahmeer.com</p>
+                    <p className="text-gray-300">info@shahmeerenterprises.com</p>
                     <p className="text-sm text-gray-400">Response within 4 hours</p>
                   </div>
                 </div>

@@ -5,11 +5,11 @@ import { Instagram, Facebook, Mail, MessageCircle } from 'lucide-react';
 const SocialMediaBar = () => {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I'm interested in bulk order inquiry for cosmetics manufacturing. Please provide more details.");
-    window.open(`https://wa.me/+923001234567?text=${message}`, '_blank');
+    window.open(`https://wa.me/+9232163385642?text=${message}`, '_blank');
   };
 
   const handleEmailClick = () => {
-    window.open('mailto:info@shahmeer.com?subject=Bulk Order Inquiry', '_blank');
+    window.open('mailto:info@shahmeerenterprises.com?subject=Bulk Order Inquiry', '_blank');
   };
 
   return (

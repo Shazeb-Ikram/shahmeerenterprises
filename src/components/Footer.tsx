@@ -7,7 +7,7 @@ const Footer = () => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I'm interested in learning more about your manufacturing services.");
-    window.open(`https://wa.me/+923001234567?text=${message}`, '_blank');
+    window.open(`https://wa.me/+9232163385642?text=${message}`, '_blank');
   };
 
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/7957e9b5-3dc9-4a0d-8385-e415791d2d6c.png" 
               alt="Shahmeer Enterprises" 
-              className="h-20 w-auto mb-4 filter brightness-0 invert"
+              className="h-24 w-auto mb-4 filter brightness-0 invert"
             />
             <p className="text-gray-300 mb-6 leading-relaxed">
               Your trusted partner in premium cosmetics manufacturing. We specialize in creating 
@@ -54,7 +54,7 @@ const Footer = () => {
                 <Facebook size={24} />
               </a>
               <a
-                href="mailto:info@shahmeer.com"
+                href="mailto:info@shahmeerenterprises.com"
                 className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
                 aria-label="Email"
               >
@@ -144,22 +144,22 @@ const Footer = () => {
             <div className="flex items-center justify-center md:justify-start gap-3">
               <MapPin size={20} className="text-rose-gold flex-shrink-0" />
               <div className="text-sm text-gray-300">
-                Industrial Estate, Sector 15<br />
-                Karachi, Pakistan 75500
+                A-183, Block 8, KEACHS<br />
+                Karachi, Pakistan
               </div>
             </div>
             <div className="flex items-center justify-center md:justify-start gap-3">
               <Phone size={20} className="text-rose-gold flex-shrink-0" />
               <div className="text-sm text-gray-300">
-                +92 300 123 4567<br />
+                +92 321 6338 5642<br />
                 Available 9 AM - 6 PM (PKT)
               </div>
             </div>
             <div className="flex items-center justify-center md:justify-start gap-3">
-              <Globe size={20} className="text-rose-gold flex-shrink-0" />
+              <Mail size={20} className="text-rose-gold flex-shrink-0" />
               <div className="text-sm text-gray-300">
-                shahmeerenterprises.com<br />
-                info@shahmeer.com
+                info@shahmeerenterprises.com<br />
+                Manufacturing Excellence
               </div>
             </div>
           </div>

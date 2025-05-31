@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Award, Globe, Users, Calendar } from 'lucide-react';
+import { Award, Globe, Users, Calendar, Crown } from 'lucide-react';
 
 const About = () => {
   return (
@@ -28,6 +28,30 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             
+            {/* Leadership Section */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-12 shadow-lg">
+              <h2 className="text-3xl font-semibold text-deep-brown mb-6 flex items-center gap-3">
+                <Crown className="text-warm-gold" size={32} />
+                Our Leadership
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="text-center p-6 bg-gradient-to-br from-warm-gold/10 to-soft-pink/10 rounded-xl">
+                  <h3 className="text-2xl font-bold text-deep-brown mb-2">Anis</h3>
+                  <p className="text-warm-gold font-semibold mb-4">Founder</p>
+                  <p className="text-deep-brown/80">
+                    Visionary leader who established Shahmeer Enterprises in 2012 with a commitment to excellence in cosmetics manufacturing.
+                  </p>
+                </div>
+                <div className="text-center p-6 bg-gradient-to-br from-soft-pink/10 to-warm-gold/10 rounded-xl">
+                  <h3 className="text-2xl font-bold text-deep-brown mb-2">Ramis Anis</h3>
+                  <p className="text-warm-gold font-semibold mb-4">Co-Founder</p>
+                  <p className="text-deep-brown/80">
+                    Strategic partner driving innovation and growth, ensuring our manufacturing processes meet the highest quality standards.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Company Overview */}
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-12 shadow-lg">
               <h2 className="text-3xl font-semibold text-deep-brown mb-6 flex items-center gap-3">
