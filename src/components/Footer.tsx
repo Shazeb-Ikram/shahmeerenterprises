@@ -7,7 +7,7 @@ const Footer = () => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I'm interested in learning more about your manufacturing services.");
-    window.open(`https://wa.me/+9232163385642?text=${message}`, '_blank');
+    window.open(`https://wa.me/+923163385642?text=${message}`, '_blank');
   };
 
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/7957e9b5-3dc9-4a0d-8385-e415791d2d6c.png" 
               alt="Shahmeer Enterprises" 
-              className="h-24 w-auto mb-4 filter brightness-0 invert"
+              className="h-20 w-auto mb-4"
             />
             <p className="text-gray-300 mb-6 leading-relaxed">
               Your trusted partner in premium cosmetics manufacturing. We specialize in creating 
@@ -30,7 +30,7 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <button
                 onClick={handleWhatsAppClick}
-                className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
+                className="text-rose-gold hover:text-white transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
                 aria-label="WhatsApp Business"
               >
                 <MessageCircle size={24} />
@@ -39,7 +39,7 @@ const Footer = () => {
                 href="https://instagram.com/shahmeerenterprises"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
+                className="text-rose-gold hover:text-white transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
                 aria-label="Instagram"
               >
                 <Instagram size={24} />
@@ -48,14 +48,14 @@ const Footer = () => {
                 href="https://facebook.com/shahmeerenterprises"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
+                className="text-rose-gold hover:text-white transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
                 aria-label="Facebook"
               >
                 <Facebook size={24} />
               </a>
               <a
                 href="mailto:info@shahmeerenterprises.com"
-                className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
+                className="text-rose-gold hover:text-white transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
                 aria-label="Email"
               >
                 <Mail size={24} />
@@ -151,15 +151,13 @@ const Footer = () => {
             <div className="flex items-center justify-center md:justify-start gap-3">
               <Phone size={20} className="text-rose-gold flex-shrink-0" />
               <div className="text-sm text-gray-300">
-                +92 321 6338 5642<br />
-                Available 9 AM - 6 PM (PKT)
+                +92 316 3385 642
               </div>
             </div>
             <div className="flex items-center justify-center md:justify-start gap-3">
               <Mail size={20} className="text-rose-gold flex-shrink-0" />
               <div className="text-sm text-gray-300">
-                info@shahmeerenterprises.com<br />
-                Manufacturing Excellence
+                info@shahmeerenterprises.com
               </div>
             </div>
           </div>

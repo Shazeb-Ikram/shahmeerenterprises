@@ -5,7 +5,7 @@ import { Instagram, Facebook, Mail, MessageCircle } from 'lucide-react';
 const SocialMediaBar = () => {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I'm interested in bulk order inquiry for cosmetics manufacturing. Please provide more details.");
-    window.open(`https://wa.me/+9232163385642?text=${message}`, '_blank');
+    window.open(`https://wa.me/+923163385642?text=${message}`, '_blank');
   };
 
   const handleEmailClick = () => {
@@ -22,7 +22,7 @@ const SocialMediaBar = () => {
           <div className="flex items-center space-x-4">
             <button
               onClick={handleWhatsAppClick}
-              className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
+              className="text-rose-gold hover:text-white transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
               aria-label="WhatsApp Business"
             >
               <MessageCircle size={20} />
@@ -31,7 +31,7 @@ const SocialMediaBar = () => {
               href="https://instagram.com/shahmeerenterprises"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
+              className="text-rose-gold hover:text-white transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
               aria-label="Instagram"
             >
               <Instagram size={20} />
@@ -40,14 +40,14 @@ const SocialMediaBar = () => {
               href="https://facebook.com/shahmeerenterprises"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
+              className="text-rose-gold hover:text-white transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
               aria-label="Facebook"
             >
               <Facebook size={20} />
             </a>
             <button
               onClick={handleEmailClick}
-              className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
+              className="text-rose-gold hover:text-white transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
               aria-label="Email"
             >
               <Mail size={20} />

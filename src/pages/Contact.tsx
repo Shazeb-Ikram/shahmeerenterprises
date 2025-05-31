@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import { Mail, Phone, MapPin, Send, Sparkles, MessageCircle, Clock, Globe, Facebook, Instagram } from 'lucide-react';
@@ -26,7 +25,7 @@ const Contact = () => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I'm interested in discussing a bulk order for cosmetics manufacturing.");
-    window.open(`https://wa.me/+9232163385642?text=${message}`, '_blank');
+    window.open(`https://wa.me/+923163385642?text=${message}`, '_blank');
   };
 
   const handleEmailClick = () => {
@@ -204,7 +203,7 @@ const Contact = () => {
                       <Phone className="w-6 h-6 text-warm-gold group-hover:scale-110 transition-transform duration-300" />
                       <div>
                         <div className="font-semibold text-deep-brown">Phone</div>
-                        <div className="text-sm text-deep-brown/70">+92 321 6338 5642</div>
+                        <div className="text-sm text-deep-brown/70">+92 316 3385 642</div>
                       </div>
                     </div>
                   </div>
