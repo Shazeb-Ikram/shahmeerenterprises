@@ -17,9 +17,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <h3 className="font-playfair text-3xl font-bold text-rose-gold mb-4">
-              Shahmeer Enterprises
-            </h3>
+            <img 
+              src="/lovable-uploads/7957e9b5-3dc9-4a0d-8385-e415791d2d6c.png" 
+              alt="Shahmeer Enterprises" 
+              className="h-16 w-auto mb-4 filter brightness-0 invert"
+            />
             <p className="text-gray-300 mb-6 leading-relaxed">
               Your trusted partner in premium cosmetics manufacturing. We specialize in creating 
               bespoke beauty solutions for retailers, spas, and beauty brands worldwide with 

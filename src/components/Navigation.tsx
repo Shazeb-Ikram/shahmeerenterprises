@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,13 +29,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-r from-warm-gold to-soft-pink rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg">
-              <Sparkles className="w-6 h-6 text-white" />
-            </div>
-            <span className="font-cormorant font-bold text-xl md:text-2xl text-deep-brown group-hover:text-warm-gold transition-colors duration-300">
-              Shahmeer
-            </span>
+          <Link to="/" className="flex items-center group">
+            <img 
+              src="/lovable-uploads/7957e9b5-3dc9-4a0d-8385-e415791d2d6c.png" 
+              alt="Shahmeer Enterprises" 
+              className="h-12 w-auto md:h-14 group-hover:scale-110 transition-all duration-300"
+            />
           </Link>
 
           {/* Desktop Navigation */}
