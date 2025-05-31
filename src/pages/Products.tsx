@@ -27,7 +27,7 @@ const Products = () => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I'm interested in discussing a bulk order for cosmetics manufacturing.");
-    window.open(`https://wa.me/+923163385642?text=${message}`, '_blank');
+    window.open(`https://wa.me/+923001234567?text=${message}`, '_blank');
   };
 
   const categories = [
@@ -359,7 +359,7 @@ const Products = () => {
                       <MessageCircle className="w-6 h-6 animate-bounce hover:animate-spin" />
                       <div className="text-left">
                         <div className="font-semibold">WhatsApp Business</div>
-                        <div className="text-sm opacity-90">Chat with us instantly</div>
+                        <div className="text-sm opacity-90">+92 300 1234567</div>
                       </div>
                     </button>
 
@@ -367,7 +367,7 @@ const Products = () => {
                       <Mail className="w-6 h-6 text-blue-500 animate-bounce hover:animate-spin" />
                       <div>
                         <div className="font-semibold text-deep-brown">Email Us</div>
-                        <div className="text-sm text-deep-brown/70">info@shahmeerenterprises.com</div>
+                        <div className="text-sm text-deep-brown/70">info@shahmeer.com</div>
                       </div>
                     </div>
 
@@ -375,7 +375,7 @@ const Products = () => {
                       <Phone className="w-6 h-6 text-warm-gold animate-bounce hover:animate-spin" />
                       <div>
                         <div className="font-semibold text-deep-brown">Phone</div>
-                        <div className="text-sm text-deep-brown/70">+92 316 3385 642</div>
+                        <div className="text-sm text-deep-brown/70">+92 300 1234567</div>
                       </div>
                     </div>
                   </div>
@@ -418,8 +418,8 @@ const Products = () => {
             <div>
               <h4 className="font-cormorant font-bold text-lg mb-4 hover:text-warm-gold transition-colors duration-300">Contact Info</h4>
               <div className="space-y-2 text-white/70">
-                <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer">info@shahmeerenterprises.com</p>
-                <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer">+92 316 3385 642</p>
+                <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer">info@shahmeer.com</p>
+                <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer">+92 300 1234567</p>
                 <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer">Manufacturing Excellence</p>
               </div>
             </div>
