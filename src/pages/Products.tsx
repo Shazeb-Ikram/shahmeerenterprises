@@ -345,14 +345,15 @@ const Products = () => {
               <h4 className="font-cormorant font-bold text-lg mb-4 hover:text-warm-gold transition-colors duration-300">Contact Info</h4>
               <div className="space-y-2 text-white/70">
                 <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer">info@shahmeer.com</p>
-                <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer">+92 300 1234567</p>
-                <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer">Manufacturing Excellence</p>
+                <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer">+92 3163385642</p>
+                <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer">
+              </p>
               </div>
             </div>
           </div>
 
           <div className="border-t border-white/20 mt-12 pt-8 text-center text-white/60">
-            <p className="hover:text-warm-gold transition-colors duration-500 cursor-pointer">&copy; 2024 Shahmeer Enterprises. All rights reserved.</p>
+            <p className="hover:text-warm-gold transition-colors duration-500 cursor-pointer">© 2025 Shahmeer Enterprises. All rights reserved.</p>
           </div>
         </div>
       </footer>
