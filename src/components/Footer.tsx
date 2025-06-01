@@ -20,15 +20,15 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-4">
               <button onClick={handleWhatsAppClick} aria-label="WhatsApp Business" className="hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10 text-zinc-950">
-                <MessageCircle size={24} />
+                
               </button>
-              <a href="https://instagram.com/shahmeerenterprises" target="_blank" rel="noopener noreferrer" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10" aria-label="Instagram">
+              <a href="https://instagram.com/shahmeerenterprises" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-zinc-950/10">
                 <Instagram size={24} />
               </a>
-              <a href="https://facebook.com/shahmeerenterprises" target="_blank" rel="noopener noreferrer" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10" aria-label="Facebook">
+              <a href="https://facebook.com/shahmeerenterprises" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-zinc-950/10">
                 <Facebook size={24} />
               </a>
-              <a href="mailto:info@shahmeerenterprises.com" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10" aria-label="Email">
+              <a href="mailto:info@shahmeerenterprises.com" aria-label="Email" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-zinc-950/10">
                 <Mail size={24} />
               </a>
             </div>
