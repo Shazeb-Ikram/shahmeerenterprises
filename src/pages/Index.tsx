@@ -166,7 +166,7 @@ const Index = () => {
               <div className="space-y-2 text-white/70">
                 <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer">info@shahmeer.com</p>
                 <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer">+92 3163385642</p>
-                <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer">Manufacturing Excellence</p>
+                <p className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer"></p>
               </div>
             </div>
           </div>
