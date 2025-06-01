@@ -1,63 +1,34 @@
-
 import React from 'react';
 import { Instagram, Facebook, Mail, MessageCircle, MapPin, Phone, Globe } from 'lucide-react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I'm interested in learning more about your manufacturing services.");
     window.open(`https://wa.me/+9232163385642?text=${message}`, '_blank');
   };
-
-  return (
-    <footer className="bg-dark-charcoal text-white pt-16 pb-8">
+  return <footer className="bg-dark-charcoal text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <img 
-              src="/lovable-uploads/7957e9b5-3dc9-4a0d-8385-e415791d2d6c.png" 
-              alt="Shahmeer Enterprises" 
-              className="h-24 w-auto mb-4 filter brightness-0 invert"
-            />
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <img src="/lovable-uploads/7957e9b5-3dc9-4a0d-8385-e415791d2d6c.png" alt="Shahmeer Enterprises" className="h-24 w-auto mb-4 filter brightness-0 invert" />
+            <p className="mb-6 leading-relaxed text-zinc-950">
               Your trusted partner in premium cosmetics manufacturing. We specialize in creating 
               bespoke beauty solutions for retailers, spas, and beauty brands worldwide with 
               uncompromising quality and ethical practices.
             </p>
             <div className="flex items-center gap-4">
-              <button
-                onClick={handleWhatsAppClick}
-                className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
-                aria-label="WhatsApp Business"
-              >
+              <button onClick={handleWhatsAppClick} className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10" aria-label="WhatsApp Business">
                 <MessageCircle size={24} />
               </button>
-              <a
-                href="https://instagram.com/shahmeerenterprises"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
-                aria-label="Instagram"
-              >
+              <a href="https://instagram.com/shahmeerenterprises" target="_blank" rel="noopener noreferrer" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10" aria-label="Instagram">
                 <Instagram size={24} />
               </a>
-              <a
-                href="https://facebook.com/shahmeerenterprises"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
-                aria-label="Facebook"
-              >
+              <a href="https://facebook.com/shahmeerenterprises" target="_blank" rel="noopener noreferrer" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10" aria-label="Facebook">
                 <Facebook size={24} />
               </a>
-              <a
-                href="mailto:info@shahmeerenterprises.com"
-                className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
-                aria-label="Email"
-              >
+              <a href="mailto:info@shahmeerenterprises.com" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10" aria-label="Email">
                 <Mail size={24} />
               </a>
             </div>
@@ -185,8 +156,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
