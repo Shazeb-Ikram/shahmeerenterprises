@@ -172,7 +172,7 @@ const Index = () => {
           </div>
 
           <div className="border-t border-white/20 mt-12 pt-8 text-center text-white/60">
-            <p className="hover:text-warm-gold hover:scale-110 transition-all duration-500 cursor-pointer">&copy; 2024 Shahmeer Enterprises. All rights reserved.</p>
+            <p className="hover:text-warm-gold hover:scale-110 transition-all duration-500 cursor-pointer">© 2025 Shahmeer Enterprises. All rights reserved.</p>
           </div>
         </div>
       </footer>
