@@ -19,7 +19,7 @@ const Footer = () => {
               uncompromising quality and ethical practices.
             </p>
             <div className="flex items-center gap-4">
-              <button onClick={handleWhatsAppClick} className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10" aria-label="WhatsApp Business">
+              <button onClick={handleWhatsAppClick} aria-label="WhatsApp Business" className="hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10 text-zinc-950">
                 <MessageCircle size={24} />
               </button>
               <a href="https://instagram.com/shahmeerenterprises" target="_blank" rel="noopener noreferrer" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10" aria-label="Instagram">
@@ -36,8 +36,8 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-rose-gold">Services</h4>
-            <ul className="space-y-2 text-gray-300">
+            <h4 className="font-semibold text-lg mb-4 text-rose-gold text-zinc-950">Services</h4>
+            <ul className="space-y-2 text-zinc-950">
               <li>
                 <a href="#capabilities" className="hover:text-rose-gold transition-colors duration-300">
                   Skincare Manufacturing
@@ -73,8 +73,8 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-rose-gold">Company</h4>
-            <ul className="space-y-2 text-gray-300">
+            <h4 className="font-semibold text-lg mb-4 text-zinc-950">Company</h4>
+            <ul className="space-y-2 text-zinc-950">
               <li>
                 <a href="#trust" className="hover:text-rose-gold transition-colors duration-300">
                   Certifications
