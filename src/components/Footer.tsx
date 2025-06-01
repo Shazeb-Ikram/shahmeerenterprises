@@ -23,13 +23,13 @@ const Footer = () => {
                 
               </button>
               <a href="https://instagram.com/shahmeerenterprises" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-zinc-950/10">
-                <Instagram size={24} />
+                <Instagram size={24} className="bg-zinc-950" />
               </a>
               <a href="https://facebook.com/shahmeerenterprises" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-zinc-950/10">
-                <Facebook size={24} />
+                <Facebook size={24} className="bg-zinc-950" />
               </a>
               <a href="mailto:info@shahmeerenterprises.com" aria-label="Email" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-zinc-950/10">
-                <Mail size={24} />
+                <Mail size={24} className="bg-zinc-950" />
               </a>
             </div>
           </div>
@@ -120,14 +120,14 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex items-center justify-center md:justify-start gap-3">
-              <Phone size={20} className="text-rose-gold flex-shrink-0" />
+              <Phone size={20} className="text-gray-300 flex-shrink-0" />
               <div className="text-sm text-gray-300">
                 +92 321 6338 5642<br />
                 Available 9 AM - 6 PM (PKT)
               </div>
             </div>
             <div className="flex items-center justify-center md:justify-start gap-3">
-              <Mail size={20} className="text-rose-gold flex-shrink-0" />
+              <Mail size={20} className="text-gray-300 flex-shrink-0" />
               <div className="text-sm text-gray-300">
                 info@shahmeerenterprises.com<br />
                 Manufacturing Excellence
