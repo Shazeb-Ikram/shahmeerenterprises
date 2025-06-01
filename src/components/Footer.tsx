@@ -113,7 +113,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-8 mb-8">
           <div className="grid md:grid-cols-3 gap-6 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-3">
-              <MapPin size={20} className="text-rose-gold flex-shrink-0" />
+              <MapPin size={20} className="text-gray-300 flex-shrink-0" />
               <div className="text-sm text-gray-300">
                 A-183, Block 8, KEACHS<br />
                 Karachi, Pakistan
