@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import { Mail, Phone, MapPin, Send, Sparkles, MessageCircle, Clock, Globe, Facebook, Instagram } from 'lucide-react';
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     companyName: '',
@@ -9,31 +10,38 @@ const Contact = () => {
     phone: '',
     message: ''
   });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
   };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
+
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I'm interested in discussing a bulk order for cosmetics manufacturing.");
-    window.open(`https://wa.me/+9232163385642?text=${message}`, '_blank');
+    window.open(`https://wa.me/923163385642?text=${message}`, '_blank');
   };
+
   const handleEmailClick = () => {
     window.open('mailto:info@shahmeerenterprises.com?subject=Manufacturing Inquiry', '_blank');
   };
+
   const handleFacebookClick = () => {
     // Placeholder for Facebook link - will be updated when user provides the link
     window.open('https://facebook.com/shahmeerenterprises', '_blank');
   };
+
   const handleInstagramClick = () => {
     // Placeholder for Instagram link - will be updated when user provides the link
     window.open('https://instagram.com/shahmeerenterprises', '_blank');
   };
+
   return <div className="min-h-screen bg-warm-white">
       <Navigation />
       
@@ -257,4 +265,5 @@ const Contact = () => {
       </footer>
     </div>;
 };
+
 export default Contact;
