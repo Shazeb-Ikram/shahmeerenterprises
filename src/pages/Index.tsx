@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import { Sparkles, Star, ArrowRight, Play, Shield, Award, Users } from 'lucide-react';
@@ -82,7 +83,7 @@ const Index = () => {
                 <div className="relative bg-gradient-to-br from-soft-peach/30 to-soft-pink/30 rounded-3xl p-8 hover-lift group cursor-pointer hover:shadow-2xl transition-all duration-700">
                   <div className="absolute inset-0 bg-gradient-to-br from-warm-gold/10 to-soft-pink/10 rounded-3xl group-hover:from-warm-gold/20 group-hover:to-soft-pink/20 group-hover:animate-pulse transition-all duration-500" />
                   <img 
-                    src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    src="/lovable-uploads/a2e8ed12-54a1-47ed-acb8-3d15bd8df4df.png" 
                     alt="Nail Polish Remover Wipes" 
                     className="w-full h-96 object-cover rounded-2xl shadow-2xl group-hover:scale-110 group-hover:rotate-2 transition-all duration-700"
                   />

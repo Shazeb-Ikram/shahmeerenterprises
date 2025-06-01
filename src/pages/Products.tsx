@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import { Download, Sparkles, Shield, Leaf, Mail, Phone, MessageCircle } from 'lucide-react';
@@ -42,7 +43,7 @@ const Products = () => {
       id: 1,
       name: 'Premium Nail Polish Remover Wipes',
       category: 'nail-care',
-      image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/lovable-uploads/a2e8ed12-54a1-47ed-acb8-3d15bd8df4df.png',
       features: ['Acetone-free formula', 'Vitamin E enriched', 'Biodegradable wipes', 'Travel-friendly'],
       description: 'Our bestselling nail polish remover wipes offer gentle yet effective removal with nourishing ingredients.',
       badges: ['Best Seller', 'Eco-Friendly']
