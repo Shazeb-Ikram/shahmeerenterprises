@@ -1,8 +1,6 @@
-
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import { Mail, Phone, MapPin, Send, Sparkles, MessageCircle, Clock, Globe, Facebook, Instagram } from 'lucide-react';
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     companyName: '',
@@ -11,40 +9,32 @@ const Contact = () => {
     phone: '',
     message: ''
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
   };
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I'm interested in discussing a bulk order for cosmetics manufacturing.");
     window.open(`https://wa.me/+9232163385642?text=${message}`, '_blank');
   };
-
   const handleEmailClick = () => {
     window.open('mailto:info@shahmeerenterprises.com?subject=Manufacturing Inquiry', '_blank');
   };
-
   const handleFacebookClick = () => {
     // Placeholder for Facebook link - will be updated when user provides the link
     window.open('https://facebook.com/shahmeerenterprises', '_blank');
   };
-
   const handleInstagramClick = () => {
     // Placeholder for Instagram link - will be updated when user provides the link
     window.open('https://instagram.com/shahmeerenterprises', '_blank');
   };
-
-  return (
-    <div className="min-h-screen bg-warm-white">
+  return <div className="min-h-screen bg-warm-white">
       <Navigation />
       
       {/* Hero Section */}
@@ -87,29 +77,13 @@ const Contact = () => {
                       <label className="block text-sm font-medium text-deep-brown mb-2">
                         Company Name *
                       </label>
-                      <input
-                        type="text"
-                        name="companyName"
-                        value={formData.companyName}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md"
-                        placeholder="Your Company"
-                      />
+                      <input type="text" name="companyName" value={formData.companyName} onChange={handleInputChange} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md" placeholder="Your Company" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-deep-brown mb-2">
                         Contact Name *
                       </label>
-                      <input
-                        type="text"
-                        name="contactName"
-                        value={formData.contactName}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md"
-                        placeholder="Your Name"
-                      />
+                      <input type="text" name="contactName" value={formData.contactName} onChange={handleInputChange} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md" placeholder="Your Name" />
                     </div>
                   </div>
 
@@ -118,28 +92,13 @@ const Contact = () => {
                       <label className="block text-sm font-medium text-deep-brown mb-2">
                         Email Address *
                       </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md"
-                        placeholder="your@email.com"
-                      />
+                      <input type="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md" placeholder="your@email.com" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-deep-brown mb-2">
                         Phone Number
                       </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md"
-                        placeholder="+1 (555) 123-4567"
-                      />
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md" placeholder="+1 (555) 123-4567" />
                     </div>
                   </div>
 
@@ -147,20 +106,10 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-deep-brown mb-2">
                       Message
                     </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={5}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 resize-none hover:border-warm-gold hover:shadow-md"
-                      placeholder="Tell us about your project requirements..."
-                    />
+                    <textarea name="message" value={formData.message} onChange={handleInputChange} rows={5} className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 resize-none hover:border-warm-gold hover:shadow-md" placeholder="Tell us about your project requirements..." />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-warm-gold to-soft-pink text-white font-semibold py-4 rounded-xl hover:shadow-xl hover:scale-105 hover:from-warm-gold/90 hover:to-soft-pink/90 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
+                  <button type="submit" className="w-full bg-gradient-to-r from-warm-gold to-soft-pink text-white font-semibold py-4 rounded-xl hover:shadow-xl hover:scale-105 hover:from-warm-gold/90 hover:to-soft-pink/90 transition-all duration-300 flex items-center justify-center gap-2">
                     Send Message
                     <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
@@ -178,10 +127,7 @@ const Contact = () => {
                   </h3>
                   
                   <div className="space-y-4">
-                    <button 
-                      onClick={handleWhatsAppClick}
-                      className="w-full flex items-center gap-4 p-4 bg-green-500 hover:bg-green-600 text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg group"
-                    >
+                    <button onClick={handleWhatsAppClick} className="w-full flex items-center gap-4 p-4 bg-green-500 hover:bg-green-600 text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg group">
                       <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                       <div className="text-left">
                         <div className="font-semibold">WhatsApp Business</div>
@@ -189,10 +135,7 @@ const Contact = () => {
                       </div>
                     </button>
 
-                    <button 
-                      onClick={handleEmailClick}
-                      className="w-full flex items-center gap-4 p-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg group"
-                    >
+                    <button onClick={handleEmailClick} className="w-full flex items-center gap-4 p-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg group">
                       <Mail className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                       <div className="text-left">
                         <div className="font-semibold">Email Us</div>
@@ -204,7 +147,7 @@ const Contact = () => {
                       <Phone className="w-6 h-6 text-warm-gold group-hover:scale-110 transition-transform duration-300" />
                       <div>
                         <div className="font-semibold text-deep-brown">Phone</div>
-                        <div className="text-sm text-deep-brown/70">+92 321 6338 5642</div>
+                        <div className="text-sm text-deep-brown/70">+92 3163385642</div>
                       </div>
                     </div>
                   </div>
@@ -232,10 +175,7 @@ const Contact = () => {
                       <Facebook className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300" />
                       <div>
                         <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Facebook</div>
-                        <button 
-                          onClick={handleFacebookClick}
-                          className="text-deep-brown/70 hover:text-warm-gold transition-colors duration-300"
-                        >
+                        <button onClick={handleFacebookClick} className="text-deep-brown/70 hover:text-warm-gold transition-colors duration-300">
                           Follow us on Facebook
                         </button>
                       </div>
@@ -245,10 +185,7 @@ const Contact = () => {
                       <Instagram className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300" />
                       <div>
                         <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Instagram</div>
-                        <button 
-                          onClick={handleInstagramClick}
-                          className="text-deep-brown/70 hover:text-warm-gold transition-colors duration-300"
-                        >
+                        <button onClick={handleInstagramClick} className="text-deep-brown/70 hover:text-warm-gold transition-colors duration-300">
                           Follow us on Instagram
                         </button>
                       </div>
@@ -318,8 +255,6 @@ const Contact = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
