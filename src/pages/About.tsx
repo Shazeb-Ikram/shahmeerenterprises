@@ -1,12 +1,9 @@
-
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Award, Globe, Users, Calendar, Crown } from 'lucide-react';
-
 const About = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-soft-peach to-warm-cream">
+  return <div className="min-h-screen bg-gradient-to-br from-soft-peach to-warm-cream">
       <Navigation />
       
       {/* Hero Section */}
@@ -36,7 +33,7 @@ const About = () => {
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="text-center p-6 bg-gradient-to-br from-warm-gold/10 to-soft-pink/10 rounded-xl">
-                  <h3 className="text-2xl font-bold text-deep-brown mb-2">Anis</h3>
+                  <h3 className="text-2xl font-bold text-deep-brown mb-2">Anis Ur- Rehman </h3>
                   <p className="text-warm-gold font-semibold mb-4">Founder</p>
                   <p className="text-deep-brown/80">
                     Visionary leader who established Shahmeer Enterprises in 2012 with a commitment to excellence in cosmetics manufacturing.
@@ -116,8 +113,6 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
