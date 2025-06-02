@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import { Mail, Phone, MapPin, Send, Sparkles, MessageCircle, Clock, Globe, Facebook, Instagram } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,10 +11,64 @@ const Contact = () => {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    // Validate required fields
+    if (!formData.companyName || !formData.contactName || !formData.email) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields (Company Name, Contact Name, and Email).",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate form submission (replace with actual API call)
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      console.log('Form submitted successfully:', formData);
+      
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({
+        companyName: '',
+        contactName: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Submission Failed",
+        description: "There was an error sending your message. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -85,13 +140,31 @@ const Contact = () => {
                       <label className="block text-sm font-medium text-deep-brown mb-2">
                         Company Name *
                       </label>
-                      <input type="text" name="companyName" value={formData.companyName} onChange={handleInputChange} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md" placeholder="Your Company" />
+                      <input 
+                        type="text" 
+                        name="companyName" 
+                        value={formData.companyName} 
+                        onChange={handleInputChange} 
+                        required 
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed" 
+                        placeholder="Your Company" 
+                      />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-deep-brown mb-2">
                         Contact Name *
                       </label>
-                      <input type="text" name="contactName" value={formData.contactName} onChange={handleInputChange} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md" placeholder="Your Name" />
+                      <input 
+                        type="text" 
+                        name="contactName" 
+                        value={formData.contactName} 
+                        onChange={handleInputChange} 
+                        required 
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed" 
+                        placeholder="Your Name" 
+                      />
                     </div>
                   </div>
 
@@ -100,13 +173,30 @@ const Contact = () => {
                       <label className="block text-sm font-medium text-deep-brown mb-2">
                         Email Address *
                       </label>
-                      <input type="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md" placeholder="your@email.com" />
+                      <input 
+                        type="email" 
+                        name="email" 
+                        value={formData.email} 
+                        onChange={handleInputChange} 
+                        required 
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed" 
+                        placeholder="your@email.com" 
+                      />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-deep-brown mb-2">
                         Phone Number
                       </label>
-                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md" placeholder="+1 (555) 123-4567" />
+                      <input 
+                        type="tel" 
+                        name="phone" 
+                        value={formData.phone} 
+                        onChange={handleInputChange} 
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed" 
+                        placeholder="+1 (555) 123-4567" 
+                      />
                     </div>
                   </div>
 
@@ -114,12 +204,33 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-deep-brown mb-2">
                       Message
                     </label>
-                    <textarea name="message" value={formData.message} onChange={handleInputChange} rows={5} className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 resize-none hover:border-warm-gold hover:shadow-md" placeholder="Tell us about your project requirements..." />
+                    <textarea 
+                      name="message" 
+                      value={formData.message} 
+                      onChange={handleInputChange} 
+                      rows={5} 
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 resize-none hover:border-warm-gold hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed" 
+                      placeholder="Tell us about your project requirements..." 
+                    />
                   </div>
 
-                  <button type="submit" className="w-full bg-gradient-to-r from-warm-gold to-soft-pink text-white font-semibold py-4 rounded-xl hover:shadow-xl hover:scale-105 hover:from-warm-gold/90 hover:to-soft-pink/90 transition-all duration-300 flex items-center justify-center gap-2">
-                    Send Message
-                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-warm-gold to-soft-pink text-white font-semibold py-4 rounded-xl hover:shadow-xl hover:scale-105 hover:from-warm-gold/90 hover:to-soft-pink/90 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      </>
+                    )}
                   </button>
                 </form>
               </div>
