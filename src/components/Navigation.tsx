@@ -25,16 +25,16 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'glass-effect shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center group">
+          <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/7957e9b5-3dc9-4a0d-8385-e415791d2d6c.png" 
               alt="Shahmeer Enterprises" 
-              className="h-16 w-auto md:h-20 group-hover:scale-110 transition-all duration-300"
+              className="h-16 w-auto md:h-20 transition-transform duration-300 hover:scale-105"
             />
           </Link>
 
@@ -44,7 +44,7 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-medium transition-all duration-300 relative hover:scale-105 ${
+                className={`font-medium transition-all duration-300 relative ${
                   location.pathname === link.path
                     ? 'text-warm-gold'
                     : 'text-deep-brown hover:text-warm-gold'
@@ -58,7 +58,7 @@ const Navigation = () => {
             ))}
             <Link 
               to="/contact"
-              className="bg-gradient-to-r from-warm-gold to-soft-pink text-white px-6 py-2 rounded-full font-medium hover:shadow-xl hover:scale-105 hover:from-warm-gold/90 hover:to-soft-pink/90 transition-all duration-300"
+              className="bg-gradient-to-r from-warm-gold to-warm-gold/90 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               Get Quote
             </Link>
@@ -67,7 +67,7 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-deep-brown hover:bg-soft-peach hover:scale-110 transition-all duration-300"
+            className="md:hidden p-2 rounded-lg text-deep-brown hover:bg-soft-peach/50 transition-all duration-300"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -75,14 +75,14 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 glass-effect border-t border-white/20 professional-transition">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg">
             <div className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block py-2 font-medium transition-all duration-300 hover:scale-105 hover:translate-x-2 ${
+                  className={`block py-2 font-medium transition-all duration-300 ${
                     location.pathname === link.path
                       ? 'text-warm-gold'
                       : 'text-deep-brown hover:text-warm-gold'
@@ -94,7 +94,7 @@ const Navigation = () => {
               <Link 
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block w-full bg-gradient-to-r from-warm-gold to-soft-pink text-white py-3 rounded-full font-medium hover:shadow-xl hover:scale-105 hover:from-warm-gold/90 hover:to-soft-pink/90 transition-all duration-300 text-center"
+                className="block w-full bg-gradient-to-r from-warm-gold to-warm-gold/90 text-white py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 text-center"
               >
                 Get Quote
               </Link>
