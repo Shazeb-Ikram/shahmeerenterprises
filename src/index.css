@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -396,7 +395,9 @@ html {
 .btn-magnetic {
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
+  background: linear-gradient(45deg, #dca272, #ffc0cb);
+  background-size: 200% 200%;
 }
 
 .btn-magnetic::before {
@@ -417,13 +418,125 @@ html {
 .btn-magnetic:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 10px 25px rgba(220, 162, 114, 0.3);
+  background-position: 100% 100%;
+  filter: hue-rotate(15deg) brightness(1.1);
+}
+
+/* Gradient button variants */
+.btn-gradient-primary {
+  background: linear-gradient(45deg, #dca272, #ffc0cb, #ffe4e1);
+  background-size: 300% 300%;
+  transition: all 0.5s ease;
+}
+
+.btn-gradient-primary:hover {
+  background-position: 100% 100%;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(220, 162, 114, 0.4);
+  filter: hue-rotate(10deg) brightness(1.1);
+}
+
+.btn-gradient-secondary {
+  background: linear-gradient(45deg, #ffe4e1, #ffc0cb, #dca272);
+  background-size: 300% 300%;
+  transition: all 0.5s ease;
+}
+
+.btn-gradient-secondary:hover {
+  background-position: 100% 100%;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 192, 203, 0.4);
+  filter: hue-rotate(-10deg) brightness(1.1);
+}
+
+.btn-gradient-outline {
+  background: linear-gradient(45deg, transparent, rgba(220, 162, 114, 0.1), rgba(255, 192, 203, 0.1));
+  background-size: 300% 300%;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: all 0.5s ease;
+}
+
+.btn-gradient-outline:hover {
+  background: linear-gradient(45deg, rgba(220, 162, 114, 0.2), rgba(255, 192, 203, 0.2), rgba(255, 228, 225, 0.2));
+  background-position: 100% 100%;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(220, 162, 114, 0.2);
+  border-color: #dca272;
+}
+
+/* Enhanced general button hover effects */
+button:not(.no-gradient):hover, 
+.btn:hover,
+a[class*="bg-"]:hover,
+[role="button"]:hover {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-2px) scale(1.02);
+  filter: hue-rotate(5deg) brightness(1.05);
+}
+
+/* Specific gradient effects for common button patterns */
+.bg-gradient-to-r:hover {
+  background-size: 150% 150%;
+  background-position: 100% 100%;
+  filter: hue-rotate(10deg) brightness(1.1);
+}
+
+.hover-gradient {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.hover-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(220, 162, 114, 0.1), rgba(255, 192, 203, 0.1), rgba(255, 228, 225, 0.1));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.hover-gradient:hover::before {
+  opacity: 1;
+}
+
+.hover-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(220, 162, 114, 0.3);
+  filter: hue-rotate(8deg) brightness(1.08);
 }
 
 .professional-transition {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background: linear-gradient(45deg, currentColor, currentColor);
+  background-size: 200% 200%;
 }
 
 .professional-transition:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background-position: 100% 100%;
+  filter: hue-rotate(5deg) brightness(1.05);
+}
+
+/* WhatsApp and special buttons */
+.bg-green-500:hover, .bg-green-600:hover {
+  background: linear-gradient(45deg, #10b981, #059669, #047857) !important;
+  background-size: 200% 200%;
+  background-position: 100% 100%;
+  transform: scale(1.05);
+  filter: hue-rotate(5deg) brightness(1.1);
+}
+
+.bg-blue-500:hover {
+  background: linear-gradient(45deg, #3b82f6, #2563eb, #1d4ed8) !important;
+  background-size: 200% 200%;
+  background-position: 100% 100%;
+  transform: scale(1.05);
+  filter: hue-rotate(5deg) brightness(1.1);
 }
