@@ -1,9 +1,7 @@
-
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import { Mail, Phone, MapPin, Send, Sparkles, MessageCircle, Clock, Globe, Facebook, Instagram } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     companyName: '',
@@ -13,17 +11,18 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate required fields
     if (!formData.companyName || !formData.contactName || !formData.email) {
       toast({
         title: "Missing Information",
         description: "Please fill in all required fields (Company Name, Contact Name, and Email).",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
@@ -34,22 +33,18 @@ const Contact = () => {
       toast({
         title: "Invalid Email",
         description: "Please enter a valid email address.",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
-
     setIsSubmitting(true);
-    
     try {
       // Simulate form submission (replace with actual API call)
       await new Promise(resolve => setTimeout(resolve, 1500));
-      
       console.log('Form submitted successfully:', formData);
-      
       toast({
         title: "Message Sent!",
-        description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+        description: "Thank you for your inquiry. We'll get back to you within 24 hours."
       });
 
       // Reset form
@@ -65,39 +60,33 @@ const Contact = () => {
       toast({
         title: "Submission Failed",
         description: "There was an error sending your message. Please try again or contact us directly.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
     }
   };
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I'm interested in discussing a bulk order for cosmetics manufacturing.");
     window.open(`https://wa.me/923163385642?text=${message}`, '_blank');
   };
-
   const handleEmailClick = () => {
     window.open('mailto:info@shahmeerenterprises.com?subject=Manufacturing Inquiry', '_blank');
   };
-
   const handleFacebookClick = () => {
     // Placeholder for Facebook link - will be updated when user provides the link
     window.open('https://facebook.com/shahmeerenterprises', '_blank');
   };
-
   const handleInstagramClick = () => {
     // Placeholder for Instagram link - will be updated when user provides the link
     window.open('https://instagram.com/shahmeerenterprises', '_blank');
   };
-
   return <div className="min-h-screen bg-warm-white">
       <Navigation />
       
@@ -141,31 +130,13 @@ const Contact = () => {
                       <label className="block text-sm font-medium text-deep-brown mb-2">
                         Company Name *
                       </label>
-                      <input 
-                        type="text" 
-                        name="companyName" 
-                        value={formData.companyName} 
-                        onChange={handleInputChange} 
-                        required 
-                        disabled={isSubmitting}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" 
-                        placeholder="Your Company" 
-                      />
+                      <input type="text" name="companyName" value={formData.companyName} onChange={handleInputChange} required disabled={isSubmitting} className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" placeholder="Your Company" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-deep-brown mb-2">
                         Contact Name *
                       </label>
-                      <input 
-                        type="text" 
-                        name="contactName" 
-                        value={formData.contactName} 
-                        onChange={handleInputChange} 
-                        required 
-                        disabled={isSubmitting}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" 
-                        placeholder="Your Name" 
-                      />
+                      <input type="text" name="contactName" value={formData.contactName} onChange={handleInputChange} required disabled={isSubmitting} className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" placeholder="Your Name" />
                     </div>
                   </div>
 
@@ -174,30 +145,13 @@ const Contact = () => {
                       <label className="block text-sm font-medium text-deep-brown mb-2">
                         Email Address *
                       </label>
-                      <input 
-                        type="email" 
-                        name="email" 
-                        value={formData.email} 
-                        onChange={handleInputChange} 
-                        required 
-                        disabled={isSubmitting}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" 
-                        placeholder="your@email.com" 
-                      />
+                      <input type="email" name="email" value={formData.email} onChange={handleInputChange} required disabled={isSubmitting} className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" placeholder="your@email.com" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-deep-brown mb-2">
                         Phone Number
                       </label>
-                      <input 
-                        type="tel" 
-                        name="phone" 
-                        value={formData.phone} 
-                        onChange={handleInputChange} 
-                        disabled={isSubmitting}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" 
-                        placeholder="+1 (555) 123-4567" 
-                      />
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} disabled={isSubmitting} className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" placeholder="+1 (555) 123-4567" />
                     </div>
                   </div>
 
@@ -205,33 +159,17 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-deep-brown mb-2">
                       Message
                     </label>
-                    <textarea 
-                      name="message" 
-                      value={formData.message} 
-                      onChange={handleInputChange} 
-                      rows={5} 
-                      disabled={isSubmitting}
-                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 resize-none disabled:opacity-50 disabled:cursor-not-allowed" 
-                      placeholder="Tell us about your project requirements..." 
-                    />
+                    <textarea name="message" value={formData.message} onChange={handleInputChange} rows={5} disabled={isSubmitting} className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 resize-none disabled:opacity-50 disabled:cursor-not-allowed" placeholder="Tell us about your project requirements..." />
                   </div>
 
-                  <button 
-                    type="submit" 
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-warm-gold to-soft-pink text-white font-semibold py-4 rounded-xl hover:shadow-xl hover:scale-105 hover:from-warm-gold/90 hover:to-soft-pink/90 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-                  >
-                    {isSubmitting ? (
-                      <>
+                  <button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-warm-gold to-soft-pink text-white font-semibold py-4 rounded-xl hover:shadow-xl hover:scale-105 hover:from-warm-gold/90 hover:to-soft-pink/90 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100">
+                    {isSubmitting ? <>
                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                         Sending...
-                      </>
-                    ) : (
-                      <>
+                      </> : <>
                         Send Message
                         <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                      </>
-                    )}
+                      </>}
                   </button>
                 </form>
               </div>
@@ -283,7 +221,7 @@ const Contact = () => {
                     <div className="flex items-start gap-4 group cursor-pointer hover:bg-soft-peach/20 p-3 rounded-lg transition-all duration-300">
                       <MapPin className="w-6 h-6 text-warm-gold mt-1 group-hover:scale-110 transition-transform duration-300" />
                       <div>
-                        <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Manufacturing Facility</div>
+                        <div className="font-semibold text-deep-brown group-hover:text-warm-gold transition-colors duration-300">Available At</div>
                         <div className="text-deep-brown/70">
                           A-183, Block 8, KEACHS<br />
                           Karachi, Pakistan
@@ -377,5 +315,4 @@ const Contact = () => {
       </footer>
     </div>;
 };
-
 export default Contact;
