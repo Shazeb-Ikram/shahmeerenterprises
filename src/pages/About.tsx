@@ -1,9 +1,11 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Award, Globe, Users, Calendar, Crown } from 'lucide-react';
+import { Award, Globe, Users, Calendar, Crown, Beaker } from 'lucide-react';
+
 const About = () => {
-  return <div className="min-h-screen bg-gradient-to-br from-soft-peach to-warm-cream">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-soft-peach to-warm-cream">
       <Navigation />
       
       {/* Hero Section */}
@@ -63,6 +65,20 @@ const About = () => {
               </p>
             </div>
 
+            {/* Research & Development Section */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-12 shadow-lg">
+              <h2 className="text-3xl font-semibold text-deep-brown mb-6 flex items-center gap-3">
+                <Beaker className="text-warm-gold" size={32} />
+                Research & Development
+              </h2>
+              <p className="text-deep-brown/90 text-lg leading-relaxed mb-6">
+                Our dedicated R&D team continuously innovates to develop cutting-edge formulations that meet evolving market demands. We invest in advanced testing equipment and collaborate with cosmetic chemists to create products that combine effectiveness with safety.
+              </p>
+              <p className="text-deep-brown/90 text-lg leading-relaxed">
+                From natural ingredient research to sustainable packaging solutions, our R&D initiatives ensure we stay ahead of industry trends while maintaining our commitment to quality and environmental responsibility.
+              </p>
+            </div>
+
             {/* Manufacturing Process */}
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-12 shadow-lg">
               <h2 className="text-3xl font-semibold text-deep-brown mb-6 flex items-center gap-3">
@@ -113,6 +129,8 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default About;
