@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import { Mail, Phone, MapPin, Send, Sparkles, MessageCircle, Clock, Globe, Facebook, Instagram } from 'lucide-react';
@@ -104,16 +105,16 @@ const Contact = () => {
       <section className="relative pt-20 pb-16 overflow-hidden">
         <div className="absolute inset-0 hero-gradient" />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto professional-transition">
+          <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 mb-8 hover:bg-white/30 transition-all duration-300 cursor-pointer">
               <Sparkles className="w-5 h-5 text-warm-gold" />
               <span className="text-sm font-medium text-deep-brown">Get In Touch</span>
             </div>
             
-            <h1 className="font-cormorant text-4xl md:text-6xl font-bold text-deep-brown mb-6 professional-transition">
+            <h1 className="font-cormorant text-4xl md:text-6xl font-bold text-deep-brown mb-6">
               Contact Us
             </h1>
-            <p className="text-xl text-deep-brown/80 max-w-2xl mx-auto professional-transition">
+            <p className="text-xl text-deep-brown/80 max-w-2xl mx-auto">
               Ready to bring your cosmetics vision to life? Let's discuss your manufacturing needs and create something beautiful together.
             </p>
           </div>
@@ -125,12 +126,12 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
             {/* Contact Form */}
-            <div className="professional-transition">
-              <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <h2 className="font-cormorant text-3xl font-bold text-deep-brown mb-2 professional-transition">
+            <div>
+              <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
+                <h2 className="font-cormorant text-3xl font-bold text-deep-brown mb-2">
                   Send Us a Message
                 </h2>
-                <p className="text-deep-brown/70 mb-8 professional-transition">
+                <p className="text-deep-brown/70 mb-8">
                   Fill out the form below and we'll get back to you within 24 hours.
                 </p>
 
@@ -147,7 +148,7 @@ const Contact = () => {
                         onChange={handleInputChange} 
                         required 
                         disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed" 
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" 
                         placeholder="Your Company" 
                       />
                     </div>
@@ -162,7 +163,7 @@ const Contact = () => {
                         onChange={handleInputChange} 
                         required 
                         disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed" 
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" 
                         placeholder="Your Name" 
                       />
                     </div>
@@ -180,7 +181,7 @@ const Contact = () => {
                         onChange={handleInputChange} 
                         required 
                         disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed" 
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" 
                         placeholder="your@email.com" 
                       />
                     </div>
@@ -194,7 +195,7 @@ const Contact = () => {
                         value={formData.phone} 
                         onChange={handleInputChange} 
                         disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 hover:border-warm-gold hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed" 
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" 
                         placeholder="+1 (555) 123-4567" 
                       />
                     </div>
@@ -210,7 +211,7 @@ const Contact = () => {
                       onChange={handleInputChange} 
                       rows={5} 
                       disabled={isSubmitting}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 resize-none hover:border-warm-gold hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed" 
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-warm-gold focus:border-transparent transition-all duration-300 resize-none disabled:opacity-50 disabled:cursor-not-allowed" 
                       placeholder="Tell us about your project requirements..." 
                     />
                   </div>
@@ -237,11 +238,11 @@ const Contact = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="professional-transition">
+            <div>
               <div className="space-y-8">
                 {/* Quick Contact */}
-                <div className="bg-gradient-to-br from-soft-peach/30 to-soft-pink/20 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
-                  <h3 className="font-cormorant text-2xl font-bold text-deep-brown mb-6 professional-transition">
+                <div className="bg-gradient-to-br from-soft-peach/30 to-soft-pink/20 rounded-3xl p-8 border border-gray-100">
+                  <h3 className="font-cormorant text-2xl font-bold text-deep-brown mb-6">
                     Quick Contact
                   </h3>
                   
@@ -273,8 +274,8 @@ const Contact = () => {
                 </div>
 
                 {/* Office Info */}
-                <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <h3 className="font-cormorant text-2xl font-bold text-deep-brown mb-6 professional-transition">
+                <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
+                  <h3 className="font-cormorant text-2xl font-bold text-deep-brown mb-6">
                     Office Information
                   </h3>
                   
@@ -313,7 +314,7 @@ const Contact = () => {
                 </div>
 
                 {/* Response Time */}
-                <div className="bg-gradient-to-r from-warm-gold to-soft-pink rounded-3xl p-8 text-white hover:shadow-xl transition-shadow duration-300">
+                <div className="bg-gradient-to-r from-warm-gold to-soft-pink rounded-3xl p-8 text-white">
                   <h3 className="font-cormorant text-2xl font-bold mb-4">
                     We're Here to Help
                   </h3>
