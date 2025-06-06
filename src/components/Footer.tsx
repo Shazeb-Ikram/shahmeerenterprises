@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <div className="bg-white rounded-lg p-3 inline-block mb-4">
+            <div className="inline-block mb-4">
               <img 
                 src="/lovable-uploads/fe299903-57d3-46c7-bed5-a1c84f30728a.png" 
                 alt="Shahmeer Ent" 
