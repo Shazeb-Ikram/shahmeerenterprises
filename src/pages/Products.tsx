@@ -34,9 +34,9 @@ const Products = () => {
     name: 'Premium Nail Polish Remover Wipes',
     category: 'nail-care',
     image: '/lovable-uploads/a2e8ed12-54a1-47ed-acb8-3d15bd8df4df.png',
-    features: ['Acetone-free formula', 'Vitamin E enriched', 'Biodegradable wipes', 'Travel-friendly'],
+    features: ['Acetone-free formula', 'Vitamin E enriched', 'Travel-friendly'],
     description: 'Our bestselling nail polish remover wipes offer gentle yet effective removal with nourishing ingredients.',
-    badges: ['Best Seller', 'Eco-Friendly']
+    badges: ['Best Seller']
   }];
 
   return (
@@ -87,7 +87,6 @@ const Products = () => {
                     {product.badges.map((badge, badgeIndex) => (
                       <span key={badgeIndex} className={`px-3 py-1 text-xs font-semibold rounded-full hover:scale-110 transition-all duration-300 ${
                         badge === 'Best Seller' ? 'bg-warm-gold text-white hover:bg-warm-gold/90' : 
-                        badge === 'Eco-Friendly' ? 'bg-green-500 text-white hover:bg-green-600' : 
                         'bg-gray-500 text-white hover:bg-gray-600'
                       }`}>
                         {badge}
@@ -113,15 +112,6 @@ const Products = () => {
                       </div>
                     ))}
                   </div>
-
-                  {product.id === 1 && (
-                    <div className="flex items-center justify-end mb-6">
-                      <div className="flex items-center gap-1 text-green-600 hover:scale-110 transition-all duration-300 cursor-pointer">
-                        <Leaf className="w-4 h-4" />
-                        <span className="text-xs font-medium">Eco-Friendly</span>
-                      </div>
-                    </div>
-                  )}
 
                   <div className="flex gap-3">
                     <Link to="/contact" className="flex-1 bg-gradient-to-r from-warm-gold to-soft-pink text-white font-semibold py-3 rounded-full text-center hover:shadow-2xl hover:scale-110 hover:from-warm-gold/90 hover:to-soft-pink/90 transition-all duration-500 transform">
