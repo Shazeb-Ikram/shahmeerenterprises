@@ -31,11 +31,13 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <img 
-              src="/lovable-uploads/7957e9b5-3dc9-4a0d-8385-e415791d2d6c.png" 
-              alt="Shahmeer Enterprises" 
-              className="h-16 w-auto md:h-20 group-hover:scale-110 transition-all duration-300"
-            />
+            <div className="bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-sm">
+              <img 
+                src="/lovable-uploads/fe299903-57d3-46c7-bed5-a1c84f30728a.png" 
+                alt="Shahmeer Ent" 
+                className="h-12 w-auto md:h-16 group-hover:scale-110 transition-all duration-300"
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

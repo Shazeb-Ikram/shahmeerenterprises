@@ -1,43 +1,74 @@
+
 import React from 'react';
 import { Instagram, Facebook, Mail, MessageCircle, MapPin, Phone, Globe } from 'lucide-react';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I'm interested in learning more about your manufacturing services.");
     window.open(`https://wa.me/+9232163385642?text=${message}`, '_blank');
   };
-  return <footer className="bg-dark-charcoal text-white pt-16 pb-8">
+
+  return (
+    <footer className="bg-dark-charcoal text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <img src="/lovable-uploads/7957e9b5-3dc9-4a0d-8385-e415791d2d6c.png" alt="Shahmeer Enterprises" className="h-24 w-auto mb-4 filter brightness-0 invert" />
-            <p className="mb-6 leading-relaxed text-zinc-950">
+            <div className="bg-white rounded-lg p-3 inline-block mb-4">
+              <img 
+                src="/lovable-uploads/fe299903-57d3-46c7-bed5-a1c84f30728a.png" 
+                alt="Shahmeer Ent" 
+                className="h-20 w-auto"
+              />
+            </div>
+            <p className="mb-6 leading-relaxed text-gray-300">
               Your trusted partner in premium cosmetics manufacturing. We specialize in creating 
               bespoke beauty solutions for retailers, spas, and beauty brands worldwide with 
               uncompromising quality and ethical practices.
             </p>
             <div className="flex items-center gap-4">
-              <button onClick={handleWhatsAppClick} aria-label="WhatsApp Business" className="hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10 text-zinc-950">
-                
+              <button 
+                onClick={handleWhatsAppClick} 
+                aria-label="WhatsApp Business" 
+                className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
+              >
+                <MessageCircle size={24} />
               </button>
-              <a href="https://instagram.com/shahmeerenterprises" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-zinc-950/10">
-                <Instagram size={24} className="bg-zinc-950" />
+              <a 
+                href="https://instagram.com/shahmeerenterprises" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram" 
+                className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
+              >
+                <Instagram size={24} />
               </a>
-              <a href="https://facebook.com/shahmeerenterprises" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-zinc-950/10">
-                <Facebook size={24} className="bg-zinc-950" />
+              <a 
+                href="https://facebook.com/shahmeerenterprises" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Facebook" 
+                className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
+              >
+                <Facebook size={24} />
               </a>
-              <a href="mailto:info@shahmeerenterprises.com" aria-label="Email" className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-zinc-950/10">
-                <Mail size={24} className="bg-zinc-950" />
+              <a 
+                href="mailto:info@shahmeerenterprises.com" 
+                aria-label="Email" 
+                className="text-white hover:text-rose-gold transition-colors duration-300 p-2 rounded-full hover:bg-rose-gold/10"
+              >
+                <Mail size={24} />
               </a>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-rose-gold text-zinc-950">Services</h4>
-            <ul className="space-y-2 text-zinc-950">
+            <h4 className="font-semibold text-lg mb-4 text-rose-gold">Services</h4>
+            <ul className="space-y-2 text-gray-300">
               <li>
                 <a href="#capabilities" className="hover:text-rose-gold transition-colors duration-300">
                   Skincare Manufacturing
@@ -73,8 +104,8 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-zinc-950">Company</h4>
-            <ul className="space-y-2 text-zinc-950">
+            <h4 className="font-semibold text-lg mb-4 text-rose-gold">Company</h4>
+            <ul className="space-y-2 text-gray-300">
               <li>
                 <a href="#trust" className="hover:text-rose-gold transition-colors duration-300">
                   Certifications
@@ -156,6 +187,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
