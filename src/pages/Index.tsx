@@ -104,7 +104,7 @@ const Index = () => {
                 </h3>
 
                 <div className="space-y-4 mb-8">
-                  {['Gentle acetone-free formula', 'Infused with nourishing vitamin E', 'Convenient travel-friendly packaging', 'Eco-friendly biodegradable wipes'].map((feature, index) => <div key={index} className="flex items-start gap-3 group hover:translate-x-4 transition-all duration-500" style={{
+                  {['Gentle acetone-free formula', 'Infused with nourishing vitamin E', 'Convenient travel-friendly packaging'].map((feature, index) => <div key={index} className="flex items-start gap-3 group hover:translate-x-4 transition-all duration-500" style={{
                   animationDelay: `${index * 0.1}s`
                 }}>
                       <div className="w-2 h-2 bg-warm-gold rounded-full mt-2 group-hover:scale-200 group-hover:animate-spin transition-all duration-500" />
